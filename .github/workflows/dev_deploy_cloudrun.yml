@@ -42,7 +42,7 @@ jobs:
   discord_notification_after_job:
     if: always()
     needs:
-      - terraform_apply
+      - deploy_cloudrun
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
