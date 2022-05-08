@@ -1,11 +1,11 @@
-name: Dev Deploy Blog Cloud Run
+name: Prod Deploy Blog Cloud Run
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'terraform/**'
+      - 'server/**'
       - '.github/workflows/_shared_deploy_cloudrun.yml'
       - '.github/workflows/prod_deploy_cloudrun.yml'
 

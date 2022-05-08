@@ -5,10 +5,10 @@
   "license": "Zlib",
   "sideEffects": false,
   "scripts": {
-    "build": "remix build && esbuild server/serve.mjs --platform=node --bundle --outfile=build/serve.js",
+    "build": "remix build && esbuild script/serve.mjs --platform=node --bundle --outfile=build/serve.js",
     "dev": "remix dev",
     "start": "remix-serve build",
-    "format": "prettier -w \"./{app,server}/**/*.{ts,mts,cts,js,mjs,cjs,tsx,jsx}\""
+    "format": "prettier -w \"./{app,script}/**/*.{ts,mts,cts,js,mjs,cjs,tsx,jsx}\""
   },
   "devDependencies": {
     "@remix-run/dev": "^1.4.3",

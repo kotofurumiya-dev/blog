@@ -5,7 +5,7 @@ on:
     branches:
       - develop
     paths:
-      - 'terraform/**'
+      - 'server/**'
       - '.github/workflows/_shared_deploy_cloudrun.yml'
       - '.github/workflows/dev_deploy_cloudrun.yml'
 
