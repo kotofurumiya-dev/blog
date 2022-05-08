@@ -1,0 +1,22 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: blog
+  annotations:
+    run.googleapis.com/ingress: internal-and-cloud-load-balancing
+spec:
+  template:
+    spec:
+      serviceAccountName: "$SERVICE_ACCOUNT"
+      containerConcurrency: 100
+      containers:
+      - image: "$IMAGE"
+        env:
+          - name: CONTENTFUL_SPACE_ID
+            value: "$CONTENTFUL_SPACE_ID"
+          - name: CONTENTFUL_ACCESS_TOKEN
+            value: "$CONTENTFUL_ACCESS_TOKEN"
+        resources:
+          limits:
+            cpu: "1"
+            memory: 128Mi

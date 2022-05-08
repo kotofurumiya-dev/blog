@@ -1,0 +1,3 @@
+# blog.kotofurumiya.dev
+
+WIP
